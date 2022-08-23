@@ -1,4 +1,5 @@
-#include "../Core/Application.h"
+#include "../Src/Core/Application.h"
+#include "TestLayer.h"
 
 class Sandbox : public Application
 {
@@ -11,6 +12,9 @@ public:
 int main()
 {
 	Sandbox* sb = new Sandbox("Test");
+	
+	sb->pushLayer(new TestLayer());
+
 	sb->start();
 	delete sb;
 	return 0;
