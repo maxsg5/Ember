@@ -31,6 +31,7 @@ void TestLayer::onAttach(Window* win)
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, (void*)0);
 	glEnableVertexAttribArray(0);
 	
+	m_triColor = { 0.32f, 0.41f, 0.86f };
 }
 
 void TestLayer::onDetach()
@@ -47,7 +48,13 @@ void TestLayer::onUpdate(double dt)
 void TestLayer::onRender()
 {
 	m_shader->use();
+	m_shader->setVec3("uColor", m_triColor);
 	glBindVertexArray(m_vao);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	glBindVertexArray(NULL);
+}
+
+void TestLayer::onImguiRender()
+{
+	ImGui::ColorEdit3("Triangle Color", &m_triColor[0]);
 }
