@@ -24,11 +24,20 @@ Window::Window(const std::string& label, uint32_t width, uint32_t height) :
         exit(EXIT_FAILURE);
     }
 
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(m_winID, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
 }
 
 Window::~Window()
 {
     glfwDestroyWindow(m_winID);
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
 }
 
 GLFWwindow** Window::getContext()

@@ -4,6 +4,7 @@
 #include "Window.h"
 #include <string.h>
 
+
 class Application
 {
 public:

@@ -5,7 +5,7 @@
 #include <sstream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <glm.hpp>
+#include "../Math/glm.hpp"
 
 struct shaderSource
 {
