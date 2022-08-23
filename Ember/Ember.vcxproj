@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Ember\Src\Gui;$(SolutionDir)Ember\Src\Math</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Ember\Src\Gui;$(SolutionDir)Ember\Src\Math</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,17 +133,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Application.cpp" />
-    <ClCompile Include="Core\Layerstack.cpp" />
-    <ClCompile Include="Core\Window.cpp" />
-    <ClCompile Include="Core\Layer.cpp" />
+    <ClCompile Include="Sandbox\TestLayer.cpp" />
+    <ClCompile Include="Src\Core\Application.cpp" />
+    <ClCompile Include="Src\Core\Layerstack.cpp" />
+    <ClCompile Include="Src\Core\Window.cpp" />
+    <ClCompile Include="Src\Core\Layer.cpp" />
     <ClCompile Include="Sandbox\main.cpp" />
+    <ClCompile Include="Src\Graphics\Shader.cpp" />
+    <ClCompile Include="Src\Gui\imgui.cpp" />
+    <ClCompile Include="Src\Gui\imgui_demo.cpp" />
+    <ClCompile Include="Src\Gui\imgui_draw.cpp" />
+    <ClCompile Include="Src\Gui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Src\Gui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Src\Gui\imgui_tables.cpp" />
+    <ClCompile Include="Src\Gui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Application.h" />
-    <ClInclude Include="Core\Layerstack.h" />
-    <ClInclude Include="Core\Window.h" />
-    <ClInclude Include="Core\Layer.h" />
+    <ClInclude Include="Sandbox\TestLayer.h" />
+    <ClInclude Include="Src\Core\Application.h" />
+    <ClInclude Include="Src\Core\Layerstack.h" />
+    <ClInclude Include="Src\Core\Window.h" />
+    <ClInclude Include="Src\Core\Layer.h" />
+    <ClInclude Include="Src\Graphics\Shader.h" />
+    <ClInclude Include="Src\Gui\gui.h" />
+    <ClInclude Include="Src\Gui\imconfig.h" />
+    <ClInclude Include="Src\Gui\imgui.h" />
+    <ClInclude Include="Src\Gui\imgui_impl_glfw.h" />
+    <ClInclude Include="Src\Gui\imgui_impl_opengl3.h" />
+    <ClInclude Include="Src\Gui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Src\Gui\imgui_internal.h" />
+    <ClInclude Include="Src\Gui\imstb_rectpack.h" />
+    <ClInclude Include="Src\Gui\imstb_textedit.h" />
+    <ClInclude Include="Src\Gui\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
