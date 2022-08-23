@@ -24,8 +24,14 @@ void Application::start()
         double currFrame = glfwGetTime();
         double dt = currFrame - m_lastFrame;
         m_lastFrame = currFrame;
-  
+
+        //render
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
         m_layerStack->updateLayers(dt);
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         m_window->update();
     }

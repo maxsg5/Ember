@@ -43,5 +43,6 @@ void LayerStack::updateLayers(float dt)
         Layer* layer = m_layers[i];
         layer->onUpdate(dt);
         layer->onRender();
+        layer->onImguiRender();
     }
 }
