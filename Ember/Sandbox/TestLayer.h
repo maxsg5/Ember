@@ -23,6 +23,7 @@ private:
 	Window* m_win;
 	Shader* m_shader;
 	Camera* m_camera;
+	Renderer* m_renderer;
 
 	glm::vec3 m_triColor;
 
