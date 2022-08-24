@@ -17,5 +17,5 @@ public:
 private:
     LayerStack* m_layerStack;
     Window* m_window;
-    double m_lastFrame = 0.0f;
+    float m_lastFrame = 0.0f;
 };

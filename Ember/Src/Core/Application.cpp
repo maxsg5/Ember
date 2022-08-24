@@ -21,8 +21,8 @@ void Application::start()
 {
     while (m_window->isOpen())
     {
-        double currFrame = glfwGetTime();
-        double dt = currFrame - m_lastFrame;
+        float currFrame = static_cast<float>(glfwGetTime());
+        float dt = currFrame - m_lastFrame;
         m_lastFrame = currFrame;
 
         //render
