@@ -1,0 +1,5 @@
+1 .vs/
+2 x64/
+3 Ember/.vs/
+4 Ember/imgui.ini
+5 Ember/x64/
