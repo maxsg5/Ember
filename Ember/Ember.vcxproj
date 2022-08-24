@@ -139,6 +139,7 @@
     <ClCompile Include="Src\Core\Layer.cpp" />
     <ClCompile Include="Src\Core\Layerstack.cpp" />
     <ClCompile Include="Src\Core\Window.cpp" />
+    <ClCompile Include="Src\Graphics\Camera.cpp" />
     <ClCompile Include="Src\Graphics\Shader.cpp" />
     <ClCompile Include="Src\Gui\imgui.cpp" />
     <ClCompile Include="Src\Gui\imgui_demo.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Src\Core\Layer.h" />
     <ClInclude Include="Src\Core\Layerstack.h" />
     <ClInclude Include="Src\Core\Window.h" />
+    <ClInclude Include="Src\Graphics\Camera.h" />
     <ClInclude Include="Src\Graphics\Shader.h" />
     <ClInclude Include="Src\Gui\gui.h" />
     <ClInclude Include="Src\Gui\imconfig.h" />

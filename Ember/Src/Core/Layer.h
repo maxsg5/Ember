@@ -10,7 +10,7 @@ public:
 
     virtual void onAttach(Window* win) {};
     virtual void onDetach() {};
-    virtual void onUpdate(double dt) {};
+    virtual void onUpdate(float dt) {};
     virtual void onRender() {};
     virtual void onImguiRender() {};
 
