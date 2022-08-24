@@ -141,7 +141,9 @@
     <ClCompile Include="Src\Core\Window.cpp" />
     <ClCompile Include="Src\Graphics\Camera.cpp" />
     <ClCompile Include="Src\Graphics\IndexBuffer.cpp" />
+    <ClCompile Include="Src\Graphics\Mesh.cpp" />
     <ClCompile Include="Src\Graphics\Renderer.cpp" />
+    <ClCompile Include="Src\Graphics\Scene.cpp" />
     <ClCompile Include="Src\Graphics\Shader.cpp" />
     <ClCompile Include="Src\Graphics\VertexArray.cpp" />
     <ClCompile Include="Src\Graphics\VertexBuffer.cpp" />
@@ -163,7 +165,9 @@
     <ClInclude Include="Src\Graphics\Camera.h" />
     <ClInclude Include="Src\Graphics\Graphics.h" />
     <ClInclude Include="Src\Graphics\IndexBuffer.h" />
+    <ClInclude Include="Src\Graphics\Mesh.h" />
     <ClInclude Include="Src\Graphics\Renderer.h" />
+    <ClInclude Include="Src\Graphics\Scene.h" />
     <ClInclude Include="Src\Graphics\Shader.h" />
     <ClInclude Include="Src\Graphics\VertexArray.h" />
     <ClInclude Include="Src\Graphics\VertexBuffer.h" />

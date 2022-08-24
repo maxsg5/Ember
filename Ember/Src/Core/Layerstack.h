@@ -3,6 +3,7 @@
 #include <stack>
 #include <vector>
 #include <iostream>
+#include <stdint.h>
 
 class LayerStack
 {
@@ -12,7 +13,7 @@ public:
 
     void push(Layer* layer, Window* win);
     void pop();
-    int size();
+    int8_t size();
     void updateLayers(float dt);
 
 private:

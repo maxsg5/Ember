@@ -5,3 +5,5 @@
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "Renderer.h"
+#include "Mesh.h"
+#include "Scene.h"

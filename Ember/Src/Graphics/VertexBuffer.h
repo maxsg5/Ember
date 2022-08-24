@@ -6,7 +6,7 @@
 class VertexBuffer
 {
 public:
-	VertexBuffer(size_t size, void* data, int mode, int target = GL_ARRAY_BUFFER);
+	VertexBuffer(size_t size, void* data, int32_t mode, int32_t target = GL_ARRAY_BUFFER);
 	~VertexBuffer();
 
 	void bind();
@@ -14,6 +14,6 @@ public:
 
 private:
 	uint32_t m_id;
-	int m_target;
+	int32_t m_target;
 };
 

@@ -4,8 +4,9 @@
 #include "../Src/Gui/gui.h"
 #include "../Src/Math/glm.hpp"
 #include "../Src/Math/gtc/matrix_transform.hpp"
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include <stdint.h>
+#include <vector>
+
 
 class TestLayer : public Layer
 {
@@ -21,16 +22,6 @@ public:
 
 private:
 	Window* m_win;
-	Shader* m_shader;
-	Camera* m_camera;
 	Renderer* m_renderer;
-
-	glm::vec3 m_triColor;
-
-	glm::mat4 m_proj;
-	glm::mat4 m_view;
-
-	VertexBuffer* m_vbo;
-	IndexBuffer* m_ibo;
-	VertexArray* m_vao;
+	Scene* m_scene;
 };

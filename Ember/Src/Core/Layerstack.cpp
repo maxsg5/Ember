@@ -31,14 +31,14 @@ bool LayerStack::isEmpty()
     return m_layers.size() == 0;
 }
 
-int LayerStack::size()
+int8_t LayerStack::size()
 {
     return m_layers.size();
 }
 
 void LayerStack::updateLayers(float dt)
 {
-    for (int i = m_layers.size() - 1; i >= 0; i--)
+    for (int8_t i = m_layers.size() - 1; i >= 0; i--)
     {
         Layer* layer = m_layers[i];
         layer->onUpdate(dt);

@@ -55,3 +55,8 @@ void Renderer::clear(bool color, bool depth, bool stencil)
 	glClearStencil(m_settings.clearStencil);
 	glClear(field);
 }
+
+void Renderer::render(Scene* scene)
+{
+	scene->render();
+}

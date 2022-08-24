@@ -5,8 +5,8 @@ Shader::Shader(const std::string& filepath)
     m_ID = glCreateProgram(); //creates current shader program
 
     shaderSource source = Shader::parseShader(filepath);
-    unsigned int vShader = Shader::compileShader(source.vertexSource, GL_VERTEX_SHADER); //compiles vertex source
-    unsigned int fShader = Shader::compileShader(source.fragmentSource, GL_FRAGMENT_SHADER); //compiles fragment source
+    uint32_t vShader = Shader::compileShader(source.vertexSource, GL_VERTEX_SHADER); //compiles vertex source
+    uint32_t fShader = Shader::compileShader(source.fragmentSource, GL_FRAGMENT_SHADER); //compiles fragment source
 
     //attaches shaders to program
     glAttachShader(m_ID, vShader);
@@ -25,23 +25,22 @@ void Shader::use(void)
     glUseProgram(m_ID);
 }
 
-unsigned int Shader::getId(void)
+uint32_t Shader::getId(void)
 {
     return m_ID;
 }
 
-unsigned int Shader::compileShader(const std::string& source, unsigned int type)
+uint32_t Shader::compileShader(const std::string& source, uint32_t type)
 {
-
     const char* src = source.c_str(); //returns a pointer to source
 
-    unsigned int shadermID = glCreateShader(type); //generates a shader mID
+    uint32_t shadermID = glCreateShader(type); //generates a shader mID
     glShaderSource(shadermID, 1, &src, nullptr); //fills source code for desired shader
     glCompileShader(shadermID); //compiles shader
 
     //ensures succesful compilation
-    int success;
-    char infoLog[512];
+    int32_t success;
+    GLchar infoLog[512];
     glGetShaderiv(shadermID, GL_COMPILE_STATUS, &success);
     if (!success)
     {
@@ -50,7 +49,6 @@ unsigned int Shader::compileShader(const std::string& source, unsigned int type)
         glDeleteShader(shadermID);
         exit(EXIT_FAILURE);
     }
-
     return shadermID;
 }
 
@@ -89,16 +87,16 @@ shaderSource Shader::parseShader(const std::string& filePath)
         }
         else
         {
-            ss[(int)type] << line << '\n'; //push the line into the given array based on the index
+            ss[(int32_t)type] << line << '\n'; //push the line into the given array based on the index
         }
     }
 
     return { ss[0].str(), ss[1].str() };
 }
 
-int Shader::checkUniform(const char* location)
+int32_t Shader::checkUniform(const char* location)
 {
-    int result = glGetUniformLocation(m_ID, location);
+    int32_t result = glGetUniformLocation(m_ID, location);
     if (result == -1)
     {
         std::cout << "ERROR SETTING UNIFORM : " << location << std::endl;
@@ -109,30 +107,30 @@ int Shader::checkUniform(const char* location)
 
 void Shader::setVec4(const char* location, glm::vec4 uniform)
 {
-    int result = checkUniform(location);
+    int32_t result = checkUniform(location);
     glUniform4fv(result, 1, &uniform[0]);
 }
 
 void Shader::setVec3(const char* location, glm::vec3 uniform)
 {
-    int result = checkUniform(location);
+    int32_t result = checkUniform(location);
     glUniform3fv(result, 1, &uniform[0]);
 }
 
 void Shader::setMat4(const char* location, glm::mat4 uniform)
 {
-    int result = checkUniform(location);
+    int32_t result = checkUniform(location);
     glUniformMatrix4fv(result, 1, GL_FALSE, &uniform[0][0]);
 }
 
-void Shader::setInt(const char* location, int uniform)
+void Shader::setInt(const char* location, int32_t uniform)
 {
-    int result = checkUniform(location);
+    int32_t result = checkUniform(location);
     glUniform1i(result, uniform);
 }
 
 void Shader::setFloat(const char* location, float uniform)
 {
-    int result = checkUniform(location);
+    int32_t result = checkUniform(location);
     glUniform1f(result, uniform);
 }

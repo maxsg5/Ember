@@ -1,7 +1,7 @@
 #include "IndexBuffer.h"
 #include <iostream>
 
-IndexBuffer::IndexBuffer(size_t size, uint32_t count, void* data, int mode, int target) : 
+IndexBuffer::IndexBuffer(size_t size, uint32_t count, void* data, int32_t mode, int32_t target) :
 	m_target{target}, m_count{count}
 {
 	glGenBuffers(1, &m_id);

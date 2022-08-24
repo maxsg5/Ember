@@ -11,11 +11,8 @@ public:
 
 int main()
 {
-	Sandbox* sb = new Sandbox("Test");
-	
-	sb->pushLayer(new TestLayer());
-
-	sb->start();
-	delete sb;
+	Sandbox engine("Hello World!");
+	engine.pushLayer(new TestLayer());
+	engine.start();
 	return 0;
 }

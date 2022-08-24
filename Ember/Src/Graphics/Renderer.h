@@ -1,16 +1,17 @@
 #pragma once
 #include "GL/glew.h"
 #include "../Math/glm.hpp"
+#include "Scene.h"
 
 struct RenderSettings
 {
 	bool depthTest;
 	bool blend;
-	int sFactorBlend;
-	int dFactorBlend;
+	int32_t sFactorBlend;
+	int32_t dFactorBlend;
 	glm::vec3 backgroundCol;
 	float clearDepth = 1.0f;
-	int clearStencil = 0;
+	int32_t clearStencil = 0;
 };
 
 class Renderer
@@ -20,6 +21,7 @@ public:
 	~Renderer();
 
 	void clear(bool color, bool depth, bool stencil = false);
+	void render(Scene* scene);
 
 private:
 	RenderSettings m_settings;
