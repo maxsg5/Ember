@@ -140,7 +140,10 @@
     <ClCompile Include="Src\Core\Layerstack.cpp" />
     <ClCompile Include="Src\Core\Window.cpp" />
     <ClCompile Include="Src\Graphics\Camera.cpp" />
+    <ClCompile Include="Src\Graphics\IndexBuffer.cpp" />
     <ClCompile Include="Src\Graphics\Shader.cpp" />
+    <ClCompile Include="Src\Graphics\VertexArray.cpp" />
+    <ClCompile Include="Src\Graphics\VertexBuffer.cpp" />
     <ClCompile Include="Src\Gui\imgui.cpp" />
     <ClCompile Include="Src\Gui\imgui_demo.cpp" />
     <ClCompile Include="Src\Gui\imgui_draw.cpp" />
@@ -157,7 +160,11 @@
     <ClInclude Include="Src\Core\Layerstack.h" />
     <ClInclude Include="Src\Core\Window.h" />
     <ClInclude Include="Src\Graphics\Camera.h" />
+    <ClInclude Include="Src\Graphics\Graphics.h" />
+    <ClInclude Include="Src\Graphics\IndexBuffer.h" />
     <ClInclude Include="Src\Graphics\Shader.h" />
+    <ClInclude Include="Src\Graphics\VertexArray.h" />
+    <ClInclude Include="Src\Graphics\VertexBuffer.h" />
     <ClInclude Include="Src\Gui\gui.h" />
     <ClInclude Include="Src\Gui\imconfig.h" />
     <ClInclude Include="Src\Gui\imgui.h" />
